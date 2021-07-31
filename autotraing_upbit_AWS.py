@@ -32,7 +32,7 @@ while True:
     now = datetime.datetime.now()
 
     #매도시도
-    if now.hour in [1, 5, 9, 13, 17, 21] and now.minute == 59 and 50 <= now.second <=59:
+    if now.hour in [1, 5, 9, 13, 17, 21] and now.minute == 00 and 00 <= now.second <=1:
         if op_mode is True and hold is True:
             ETC_balance = log_in.get_balance('KRW-ETC')
             log_in.sell_market_order('KRW-ETC', ETC_balance)
